@@ -92,19 +92,18 @@ export default function Login() {
 
 function userLogin(values){
     const userValues = { Email:values.main_email, Password:values.main_password, IP:ip, Location:location, Device:device };
-    const axiosHandler = axios.create({
-        baseURL: "https://spot.stable.trade/api/users/accessToken",
-        headers:{
-          
-        },
-        data: JSON.stringify(userValues)
-      })
-      fetch(axiosHandler.post()).then(res=>{
-          if(res.status === 200)
-          {
-            dispatch({type:'signUp', payload:userValues})
-          }
-      })
+   
+    var config = {
+        headers: {
+            'Content-Type': 'text/plain'
+        }
+    };
+    
+    axios.post(`https://spot.stable.trade/api/users/accessToken`,  JSON.stringify(userValues), config )
+    .then(res => {
+    console.log(res);
+    dispatch({type:'login', payload:userValues})
+    }).catch(err=>console.log(err))
 }
 
 //console.log(isloggedIn)
