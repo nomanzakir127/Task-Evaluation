@@ -147,7 +147,7 @@ export default function SignUp() {
                                 </Typography>
                             </Grid>
                             <Grid item xs={8}>
-                                <TextField id="standard-basic" label="Email" id="main_email" onChange={formik.handleChange}/>
+                                <TextField label="Email" id="main_email" onChange={formik.handleChange}/>
                                 {formik.errors.main_email ? <div style={{color:'red'}}>{formik.errors.main_email}</div>: ''}
                             </Grid>
                         </Grid>  
@@ -158,7 +158,7 @@ export default function SignUp() {
                                 </Typography>
                             </Grid>
                             <Grid item xs={8}>
-                                <TextField id="standard-basic" label="Password" id="main_password" type="password" onChange={formik.handleChange}/>
+                                <TextField label="Password" id="main_password" type="password" onChange={formik.handleChange}/>
                                 {formik.errors.main_password? <div style={{color:'red'}}>{formik.errors.main_password}</div>: ''}
                             </Grid>
                         </Grid> 
@@ -169,7 +169,7 @@ export default function SignUp() {
                                 </Typography>
                             </Grid>
                             <Grid item xs={8}>
-                                <TextField id="standard-basic" label="Confirm Password" id="con_password" type="password" onChange={formik.handleChange}/>
+                                <TextField label="Confirm Password" id="con_password" type="password" onChange={formik.handleChange}/>
                                 {formik.errors.con_password? <div style={{color:'red'}}>{formik.errors.con_password}</div>: ''}
                             </Grid>
                         </Grid> 

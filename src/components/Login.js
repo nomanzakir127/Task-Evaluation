@@ -98,7 +98,7 @@ function userLogin(values){
             'Content-Type': 'text/plain'
         }
     };
-    
+
     axios.post(`https://spot.stable.trade/api/users/accessToken`,  JSON.stringify(userValues), config )
     .then(res => {
     console.log(res);
@@ -134,7 +134,7 @@ if(isloggedIn){
                                 </Typography>
                             </Grid>
                             <Grid item xs={8}>
-                                <TextField id="standard-basic" label="Email" id="main_email" onChange={formik.handleChange}/>
+                                <TextField label="Email" id="main_email" onChange={formik.handleChange}/>
                                 {formik.errors.main_email ? <div style={{color:'red'}}>{formik.errors.main_email}</div>: ''}
                             </Grid>
                         </Grid>  
@@ -145,7 +145,7 @@ if(isloggedIn){
                                 </Typography>
                             </Grid>
                             <Grid item xs={8}>
-                                <TextField id="standard-basic" label="Enter Password" type="password" id="main_password" onChange={formik.handleChange}/>
+                                <TextField label="Enter Password" type="password" id="main_password" onChange={formik.handleChange}/>
                                 {formik.errors.main_password ? <div style={{color:'red'}}>{formik.errors.main_password}</div>: ''}
                             </Grid>
                         </Grid> 
