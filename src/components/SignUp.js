@@ -113,7 +113,11 @@ export default function SignUp() {
       .then(res => {
         console.log(res);
         dispatch({type:'signUp', payload:userValues})
-      }).catch(err=>console.log(err))
+      }).catch(err=>{
+          console.log(err)
+          //Just For checking redux is working fine
+          dispatch({type:'login', payload:userValues})
+        })
   }
 
   if(isloggedIn){
